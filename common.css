@@ -1,0 +1,132 @@
+:root {
+  --text-color: light-dark(#22092c, #e1e1e1);
+  --background-color: light-dark(#f2efe7, #111418);
+  --first-accent-color: 154, 203, 208;
+  --second-accent-color: 72, 165, 167;
+  --third-accent-color: 0, 106, 113;
+  --complementary-color: 192, 0, 0;
+}
+
+* {
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0px auto;
+  margin: 0px auto;
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+div.centered {
+  margin: 0px 20%;
+  box-sizing: border-box;
+}
+
+ul.top {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 16px 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  min-height: 10vh;
+}
+
+li.top {
+  margin: 0em 3em 0em 1em;
+  max-height: 1.5em;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    to right,
+    rgba(var(--complementary-color), 0.4) 5%,
+    rgba(var(--complementary-color), 1) 30%,
+    rgba(var(--complementary-color), 0.6) 50%
+  );
+  backdrop-filter: blur(10px) saturate(100%);
+}
+
+ul.bottom {
+  flex-wrap: wrap;
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  padding: 0px 20%;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+footer {
+  text-align: center;
+  min-height: 7.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-image: linear-gradient(
+    70deg,
+    rgba(var(--second-accent-color), 0.3) 0%,
+    rgba(var(--second-accent-color), 1) 5%,
+    rgba(var(--first-accent-color), 1) 7%,
+    rgba(var(--third-accent-color), 0.15) 9%
+  );
+  line-height: 2.5rem;
+}
+
+main {
+  padding-bottom: 12rem;
+}
+
+@media screen and (max-width: 735px) and (min-width: 535px) {
+  div.centered {
+    margin: 0px 12%;
+  }
+  ul.bottom {
+    padding: 0px;
+  }
+  body {
+    min-height: 95vh;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  div.centered {
+    margin: 0px 4%;
+  }
+  ul.bottom {
+    padding: 0px;
+  }
+  body {
+    min-height: 95vh;
+  }
+  li.top {
+    margin: 0em 2em 0em 1em;
+  }
+  nav.top {
+    background-image: linear-gradient(
+      to left,
+      rgba(var(--second-accent-color), 0.5) 15%,
+      rgb(var(--second-accent-color)) 80%,
+      rgba(var(--second-accent-color), 0.5) 95%
+    );
+  }
+}
+
+nav.top {
+  width: 100%;
+  min-height: 1.5em;
+  background-image: linear-gradient(
+    to left,
+    rgba(var(--second-accent-color), 0.3) 35%,
+    rgb(var(--second-accent-color)) 65%,
+    rgba(var(--second-accent-color), 0.3) 95%
+  );
+}

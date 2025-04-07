@@ -1,0 +1,44 @@
+h1 {
+  padding-top: 2rem;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+h2 {
+  border-bottom: 1px solid rgb(116, 19, 0);
+  padding-bottom: 0.25em;
+}
+table {
+  border: thick double;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+th,
+td {
+  border: thin solid;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1064px) and (min-width: 535px) {
+  th,
+  td {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  table,
+  th,
+  td {
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    font-size: smaller;
+  }
+}
