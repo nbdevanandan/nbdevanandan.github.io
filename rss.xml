@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Ch4n7u</title>
+      <link>https://nbdevanandan.github.io</link>
+      <description>My personal blogging website, where I share insights, thoughts, and technical&#x2F;CTF write-ups.</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://nbdevanandan.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sun, 17 Aug 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Inception</title>
+          <pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate>
+          <author>Devanandan N B</author>
+          <link>https://nbdevanandan.github.io/blog/inception/</link>
+          <guid>https://nbdevanandan.github.io/blog/inception/</guid>
+          <description xml:base="https://nbdevanandan.github.io/blog/inception/">&lt;p&gt;Coming soon…&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>
