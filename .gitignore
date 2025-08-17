@@ -1,0 +1,8 @@
+# Nothing of significance
+TOKEN
+
+# Zola build output
+/src/public/
+
+# Local Zola server cache
+/src/.zola_cache/
