@@ -6,3 +6,6 @@ TOKEN
 
 # Local Zola server cache
 /src/.zola_cache/
+
+# Obsidian markdown editor
+.obsidian
