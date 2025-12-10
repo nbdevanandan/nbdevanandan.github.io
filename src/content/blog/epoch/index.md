@@ -47,7 +47,7 @@ The other components I used in this site is as follows:
 	git submodule init
 	git submodule add https://codeberg.org/daudix/duckquill.git <BASE_DIR>/themes/duckquill
 	cd <BASE_DIR>/themes/duckquill
-	git checkout tags/vX.Y.Z 
+	git checkout tags/vX.Y.Z # see the theme documentation for latest release version
 	```
 
 	Edit your `config.toml` within `<BASE_DIR>` and add this line at the top:
