@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Ch4n7u - zola</title>
+    <subtitle>My personal blogging website, where I share insights, thoughts, and technical&#x2F;CTF write-ups.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://nbdevanandan.github.io/tags/zola/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://nbdevanandan.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-09-15T00:00:00+00:00</updated>
+    <id>https://nbdevanandan.github.io/tags/zola/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Epoch</title>
+        <published>2025-09-15T00:00:00+00:00</published>
+        <updated>2025-09-15T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Devanandan N B
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://nbdevanandan.github.io/blog/epoch/"/>
+        <id>https://nbdevanandan.github.io/blog/epoch/</id>
+        
+        <content type="html" xml:base="https://nbdevanandan.github.io/blog/epoch/">&lt;p&gt;I had always wanted a blog site for myself. This need grew even more as I started playing CTFs and looked for a space to jot down my thought process of solving challenges. That’s the epoch of this site. Here’s the steps I took to set it up.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;tech-stack&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#tech-stack&quot; aria-label=&quot;Anchor link for: tech-stack&quot;&gt;&lt;i class=&quot;icon&quot;&gt;&lt;&#x2F;i&gt;&lt;&#x2F;a&gt;
+Tech Stack&lt;&#x2F;h1&gt;
+&lt;p&gt;There are many ways to set up a blog. You can manually code up the entire site yourselves in plain HTML, CSS and if needed JavaScript and then copy the template to create new blogs; this is what I initially did, however this takes up way too much time and effort. So then comes Static Site Generators(SSGs) like Jekyll, Hugo, Eleventy, Zola etc. which turn your markdown content into webpages which share a similar structure and theme. It usually also comes with many other features like automatic syntax highlighting for your code, automatic image compression etc. SSGs largely automates your workflow and make pushing blogs faster.&lt;&#x2F;p&gt;
+&lt;p&gt;I chose to host with Github Pages and go with &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&quot;&gt;Zola Static Site Generator&lt;&#x2F;a&gt;, as it was&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;relatively new&lt;&#x2F;li&gt;
+&lt;li&gt;single binary (no dependency packages to install on your system, no compilation)&lt;&#x2F;li&gt;
+&lt;li&gt;fast (bonus: written in rust)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The other components I used in this site is as follows:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;duckquill.daudix.one&quot;&gt;Duckquill&lt;&#x2F;a&gt; - A theme for zola with a lot of features including syntax highlighting, latex support etc.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;marketplace&#x2F;actions&#x2F;zola-deploy-to-pages&quot;&gt;Zola Deploy to Pages&lt;&#x2F;a&gt; - GitHub action for deploying zola to GitHub-Pages.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;step-by-step-setup&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#step-by-step-setup&quot; aria-label=&quot;Anchor link for: step-by-step-setup&quot;&gt;&lt;i class=&quot;icon&quot;&gt;&lt;&#x2F;i&gt;&lt;&#x2F;a&gt;
+Step By Step Setup&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;step-1-setting-up-your-repository&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#step-1-setting-up-your-repository&quot; aria-label=&quot;Anchor link for: step-1-setting-up-your-repository&quot;&gt;&lt;i class=&quot;icon&quot;&gt;&lt;&#x2F;i&gt;&lt;&#x2F;a&gt;
+Step 1 - Setting Up Your Repository&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create your repository for the blog on GitHub. Your repository must be named &lt;code&gt;&amp;lt;USERNAME&amp;gt;.github.io&lt;&#x2F;code&gt; as is convention with GitHub Pages (or you can name your repository, say, &lt;code&gt;blog&lt;&#x2F;code&gt; which would appear at &lt;code&gt;&amp;lt;USERNAME&amp;gt;.github.io&#x2F;blog&lt;&#x2F;code&gt;. This is usefull when you already have a main site).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Clone this repository to your local device and intialise your site with:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; class=&quot;language-sh z-code&quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;zola&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; init &lt;span class=&quot;z-keyword z-operator z-assignment z-redirection z-shell&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;BASE_DIR&lt;span class=&quot;z-keyword z-operator z-assignment z-redirection z-shell&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This will create a sub-directory &lt;code&gt;&amp;lt;BASE_DIR&amp;gt;&lt;&#x2F;code&gt; which is the source folder for your site.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Install Duckquill theme within the repository by creating a submodule. Visit &lt;a href=&quot;https:&#x2F;&#x2F;duckquill.daudix.one&#x2F;#installation&quot;&gt;Duckquill theme’s documentation&lt;&#x2F;a&gt; for detailed steps.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; class=&quot;language-sh z-code&quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-cd z-shell&quot;&gt;cd&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; &lt;span class=&quot;z-keyword z-operator z-assignment z-redirection z-shell&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;REPO&lt;span class=&quot;z-keyword z-operator z-assignment z-redirection z-shell&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; submodule init&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; submodule add https:&#x2F;&#x2F;codeberg.org&#x2F;daudix&#x2F;duckquill.git &lt;span class=&quot;z-keyword z-operator z-assignment z-redirection z-shell&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;BASE_DIR&lt;span class=&quot;z-keyword z-operator z-assignment z-redirection z-shell&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&#x2F;themes&#x2F;duckquill&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-cd z-shell&quot;&gt;cd&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; &lt;span class=&quot;z-keyword z-operator z-assignment z-redirection z-shell&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;BASE_DIR&lt;span class=&quot;z-keyword z-operator z-assignment z-redirection z-shell&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&#x2F;themes&#x2F;duckquill&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; checkout tags&#x2F;vX.Y.Z &lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-begin z-shell&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt; see the theme documentation for latest release version&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Edit your &lt;code&gt;config.toml&lt;&#x2F;code&gt; within &lt;code&gt;&amp;lt;BASE_DIR&amp;gt;&lt;&#x2F;code&gt; and add this line at the top:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; class=&quot;language-toml z-code&quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;z-source z-toml&quot;&gt;&lt;span class=&quot;z-meta z-tag z-key z-toml&quot;&gt;&lt;span class=&quot;z-entity z-name z-tag z-toml&quot;&gt;theme&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-punctuation z-definition z-key-value z-toml&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-basic z-toml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-toml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;duckquill&lt;span class=&quot;z-punctuation z-definition z-string z-end z-toml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Optionally, add &lt;code&gt;README.md&lt;&#x2F;code&gt;, &lt;code&gt;.gitignore&lt;&#x2F;code&gt; and &lt;code&gt;LICENSE&lt;&#x2F;code&gt; files to your repository. I chose the &lt;code&gt;CC BY-NC-SA 4.0&lt;&#x2F;code&gt; license as it seemed fit for my content; mostly writeups and technical blogs.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Next step is to edit&#x2F;extend the duckquill defaults to personalise your website. In my case, I extended the default footer to include the Creative-Commons license clause as well as modified the top nav-bar.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The theme’s footer template is located at &lt;code&gt;&amp;lt;BASE_DIR&amp;gt;&#x2F;themes&#x2F;duckquill&#x2F;templates&#x2F;partial footer.html&lt;&#x2F;code&gt;. To override this, we copy the file onto &lt;code&gt;&amp;lt;BASE_DIR&amp;gt;&#x2F;templates&#x2F;partial&#x2F;footer.html&lt;&#x2F;code&gt;. &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;nbdevanandan&#x2F;nbdevanandan.github.io&#x2F;blob&#x2F;main&#x2F;src&#x2F;templates&#x2F;partials&#x2F;footer.html&quot;&gt;Checkout&lt;&#x2F;a&gt; my GitHub to see the changes I made to &lt;code&gt;footer.html&lt;&#x2F;code&gt; to make it display the license clause.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;The website’s appearance and link content on both top and bottom nav-bars are defined in the &lt;code&gt;config.toml&lt;&#x2F;code&gt; file. You can refer to the theme’s copy in &lt;code&gt;&amp;lt;BASE_DIR&amp;gt;&#x2F;themes&#x2F;duckquill&#x2F;config.toml&lt;&#x2F;code&gt; to replicate it’s color scheme and edit the links&#x2F;add new icons. It also contains plenty of other customisation options which you probably want to look at.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Now is the time to push a blog or two. To do that simply create a new folder with the blog title in the &lt;code&gt;&amp;lt;BASE_DIR&amp;gt;&#x2F;content&lt;&#x2F;code&gt; directory and write the contents within s &lt;code&gt;README.md&lt;&#x2F;code&gt; file inside.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Finally to set up automatic deployment to github-pages, I used the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;marketplace&#x2F;actions&#x2F;zola-deploy-to-pages&quot;&gt;Zola Deploy to Pages&lt;&#x2F;a&gt; GitHub Action from GitHub Marketplace.Under your repository settings: &lt;code&gt;Settings &amp;gt; Actions &amp;gt; General&lt;&#x2F;code&gt;, in Workflow permissions, make sure that GITHUB_TOKEN has Read and Write permissions. Also under &lt;code&gt;Settings &amp;gt; Pages&lt;&#x2F;code&gt; select &lt;code&gt;Source&lt;&#x2F;code&gt; as ‘Deploy from a branch’ and select branch as &lt;code&gt;gh-pages&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+</feed>
